@@ -1,0 +1,23 @@
+[
+  {
+    "id": "vespers",
+    "name": "Saturday Vespers",
+    "day": "Saturday",
+    "time": "5:00 PM",
+    "description": "Evening prayer service preparing for Sunday worship. A peaceful way to enter the Lord's Day."
+  },
+  {
+    "id": "orthros",
+    "name": "Sunday Orthros (Matins)",
+    "day": "Sunday",
+    "time": "8:15 AM",
+    "description": "Morning prayer service with psalms, hymns, and readings preparing for the Divine Liturgy."
+  },
+  {
+    "id": "liturgy",
+    "name": "Sunday Divine Liturgy",
+    "day": "Sunday",
+    "time": "9:30 AM",
+    "description": "The central worship service of the Orthodox Church, celebrating the Eucharist together as a community."
+  }
+]

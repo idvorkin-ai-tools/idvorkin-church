@@ -1,0 +1,44 @@
+[
+  {
+    "id": "baptism",
+    "name": "Baptism",
+    "description": "The sacrament of initiation into the Christian faith, performed through triple immersion in blessed water.",
+    "icon": "Droplets"
+  },
+  {
+    "id": "chrismation",
+    "name": "Chrismation",
+    "description": "The anointing with Holy Chrism (Myrrh), sealing the gift of the Holy Spirit, usually performed immediately after Baptism.",
+    "icon": "Flame"
+  },
+  {
+    "id": "eucharist",
+    "name": "Holy Eucharist",
+    "description": "The central sacrament of the Orthodox Church — receiving the Body and Blood of Christ during the Divine Liturgy.",
+    "icon": "Wine"
+  },
+  {
+    "id": "confession",
+    "name": "Confession",
+    "description": "The sacrament of repentance and reconciliation, offering spiritual healing through dialogue with a priest.",
+    "icon": "Heart"
+  },
+  {
+    "id": "marriage",
+    "name": "Marriage",
+    "description": "The sacred union of a man and woman, crowned as king and queen of their household in Christ.",
+    "icon": "Crown"
+  },
+  {
+    "id": "unction",
+    "name": "Holy Unction",
+    "description": "The anointing of the sick with blessed oil for spiritual and physical healing.",
+    "icon": "Hand"
+  },
+  {
+    "id": "ordination",
+    "name": "Ordination",
+    "description": "The setting apart of men for the service of the Church as deacons, priests, or bishops.",
+    "icon": "BookOpen"
+  }
+]

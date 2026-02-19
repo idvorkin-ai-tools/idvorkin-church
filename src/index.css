@@ -1,68 +1,256 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  /* Midnight palette — richer, warmer than generic navy */
+  --color-midnight-50: #f4f2ee;
+  --color-midnight-100: #e8e3da;
+  --color-midnight-200: #cdc4b5;
+  --color-midnight-300: #9e9585;
+  --color-midnight-400: #6d6456;
+  --color-midnight-500: #4a4237;
+  --color-midnight-600: #2d2a28;
+  --color-midnight-700: #1e2236;
+  --color-midnight-800: #151a2e;
+  --color-midnight-900: #0e1322;
+  --color-midnight-950: #080c18;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Antique gold — warmer, aged, less neon */
+  --color-gold-50: #fdf8ee;
+  --color-gold-100: #f8edd0;
+  --color-gold-200: #f0daa3;
+  --color-gold-300: #e4c373;
+  --color-gold-400: #d4a853;
+  --color-gold-500: #c9a84c;
+  --color-gold-600: #b08a30;
+  --color-gold-700: #8e6c24;
+  --color-gold-800: #6d5220;
+  --color-gold-900: #4a3716;
+
+  /* Burgundy — Byzantine accent */
+  --color-burgundy-50: #faf0f0;
+  --color-burgundy-100: #f0d4d4;
+  --color-burgundy-200: #e0a8a8;
+  --color-burgundy-300: #c47070;
+  --color-burgundy-400: #a84848;
+  --color-burgundy-500: #8b2d2d;
+  --color-burgundy-600: #6b1d2a;
+  --color-burgundy-700: #521624;
+  --color-burgundy-800: #3d101c;
+  --color-burgundy-900: #2a0b14;
+
+  /* Parchment — warm backgrounds */
+  --color-parchment-50: #fdfcfa;
+  --color-parchment-100: #f8f4ed;
+  --color-parchment-200: #f0e9dc;
+  --color-parchment-300: #e4d9c6;
+  --color-parchment-400: #d4c5a8;
+  --color-parchment-500: #b8a88a;
+
+  --font-display: "Cinzel", "Times New Roman", serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Karla", system-ui, sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@layer base {
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-parchment-100);
+    color: var(--color-midnight-700);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
 }
 
-body {
-  margin: 0;
+/* ────── Grain / noise texture overlay ────── */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  z-index: 1;
+}
+
+/* ────── Byzantine decorative cross divider ────── */
+.cross-divider {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  gap: 1rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.cross-divider::before,
+.cross-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-gold-400) 30%,
+    var(--color-gold-400) 70%,
+    transparent 100%
+  );
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.cross-divider .cross-icon {
+  color: var(--color-gold-500);
+  font-size: 0.75rem;
+  line-height: 1;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* ────── Scroll-triggered reveal animations ────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 100ms; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 200ms; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 300ms; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 400ms; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 500ms; }
+.reveal-stagger > .reveal:nth-child(7) { transition-delay: 600ms; }
+.reveal-stagger > .reveal:nth-child(8) { transition-delay: 700ms; }
+.reveal-stagger > .reveal:nth-child(9) { transition-delay: 800ms; }
+
+/* ────── Hero shimmer on text ────── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-300) 0%,
+    var(--color-gold-100) 25%,
+    var(--color-gold-400) 50%,
+    var(--color-gold-100) 75%,
+    var(--color-gold-300) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* ────── Warm card style ────── */
+.warm-card {
+  background: linear-gradient(135deg, #fdfcfa 0%, #f5f0e5 100%);
+  border: 1px solid var(--color-parchment-300);
+  box-shadow: 0 2px 12px rgba(14, 19, 34, 0.06),
+    0 0 0 1px rgba(201, 168, 76, 0.04);
+  transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+
+.warm-card:hover {
+  box-shadow: 0 8px 30px rgba(14, 19, 34, 0.1),
+    0 0 0 1px rgba(201, 168, 76, 0.15);
+  transform: translateY(-2px);
+  border-color: var(--color-gold-300);
+}
+
+/* ────── Byzantine geometric border pattern ────── */
+.byzantine-border {
+  position: relative;
+}
+
+.byzantine-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-gold-500) 0px,
+    var(--color-gold-500) 12px,
+    transparent 12px,
+    transparent 16px,
+    var(--color-burgundy-600) 16px,
+    var(--color-burgundy-600) 20px,
+    transparent 20px,
+    transparent 24px
+  );
+}
+
+/* ────── Subtle glow pulse for gold accents ────── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(201, 168, 76, 0.15); }
+  50% { box-shadow: 0 0 20px rgba(201, 168, 76, 0.3); }
+}
+
+.glow-gold {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ────── Reduced motion ────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
-  a:hover {
-    color: #747bff;
+
+  .text-shimmer {
+    animation: none;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .glow-gold {
+    animation: none;
   }
+
+  .warm-card {
+    transition: none;
+  }
+}
+
+/* ────── Hero overlay gradient ────── */
+.hero-gradient {
+  background: linear-gradient(
+    175deg,
+    rgba(8, 12, 24, 0.85) 0%,
+    rgba(14, 19, 34, 0.7) 40%,
+    rgba(107, 29, 42, 0.4) 100%
+  );
+}
+
+/* ────── Scrollbar styling ────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-parchment-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-midnight-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-midnight-400);
 }
