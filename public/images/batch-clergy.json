@@ -1,0 +1,17 @@
+[
+  {
+    "scene": "Raccoon dressed as a Greek Orthodox priest (Proistamenos) wearing elaborate golden vestments with Byzantine cross embroidery, a tall cylindrical hat (kalimavkion), holding a golden staff, dignified and warm expression, standing in front of an iconostasis",
+    "shirt": "FATHER",
+    "output": "/home/developer/gits/church_clone/public/images/raccoon-clergy-photios.webp"
+  },
+  {
+    "scene": "Raccoon dressed as an Orthodox presbyter wearing dark robes with a pectoral cross, holding an open liturgical book, kind scholarly expression, bookshelves and candles in the background, warm study atmosphere",
+    "shirt": "PASTOR",
+    "output": "/home/developer/gits/church_clone/public/images/raccoon-clergy-spyridon.webp"
+  },
+  {
+    "scene": "Raccoon dressed as an Orthodox deacon wearing a white sticharion with an orarion (liturgical stole) draped over the shoulder, holding a lit candle, cheerful helpful expression, church altar in the background",
+    "shirt": "DEACON",
+    "output": "/home/developer/gits/church_clone/public/images/raccoon-clergy-perry.webp"
+  }
+]
