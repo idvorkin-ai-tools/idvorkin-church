@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { cn } from "../../utils/cn";
 
 type ButtonVariant = "primary" | "secondary" | "accent";
@@ -21,6 +22,13 @@ export function Button({ variant = "primary", href, className, children, ...prop
   );
 
   if (href) {
+    if (href.startsWith("/")) {
+      return (
+        <Link to={href} className={styles}>
+          {children}
+        </Link>
+      );
+    }
     return (
       <a href={href} className={styles}>
         {children}

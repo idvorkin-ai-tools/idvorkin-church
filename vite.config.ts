@@ -1,23 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { viteSingleFile } from 'vite-plugin-singlefile'
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), viteSingleFile()],
   server: {
     allowedHosts: true,
   },
   build: {
-    // Single chunk for gisthost: one JS, one CSS
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        entryFileNames: 'app.js',
-        assetFileNames: (info) => {
-          if (info.name?.endsWith('.css')) return 'style.css'
-          return '[name].[ext]'
-        },
-      },
-    },
+    assetsInlineLimit: 1048576, // 1MB — force inline for singlefile
   },
 })
