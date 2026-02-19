@@ -206,7 +206,28 @@
   animation: glow-pulse 3s ease-in-out infinite;
 }
 
-/* ────── Hero parallax gradient ────── */
+/* ────── Reduced motion ────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .text-shimmer {
+    animation: none;
+  }
+
+  .glow-gold {
+    animation: none;
+  }
+
+  .warm-card {
+    transition: none;
+  }
+}
+
+/* ────── Hero overlay gradient ────── */
 .hero-gradient {
   background: linear-gradient(
     175deg,

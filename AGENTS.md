@@ -23,9 +23,9 @@ bd sync               # Sync with git
 3. **Update issue status** - Close finished work, update in-progress items
 4. **PUSH TO REMOTE** - This is MANDATORY:
    ```bash
-   git pull --rebase
+   git pull --rebase --autostash
    bd sync
-   git push
+   git push origin HEAD   # pushes current branch; NEVER push directly to main
    git status  # MUST show "up to date with origin"
    ```
 5. **Clean up** - Clear stashes, prune remote branches
@@ -33,8 +33,8 @@ bd sync               # Sync with git
 7. **Hand off** - Provide context for next session
 
 **CRITICAL RULES:**
-- Work is NOT complete until `git push` succeeds
-- NEVER stop before pushing - that leaves work stranded locally
-- NEVER say "ready to push when you are" - YOU must push
+- Work is NOT complete until changes are pushed to a **feature branch** and a PR is opened
+- NEVER push directly to `main` — always target a dedicated branch
+- Open a PR and request human review before merging
 - If push fails, resolve and retry until it succeeds
 

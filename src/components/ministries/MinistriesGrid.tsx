@@ -11,7 +11,7 @@ export function MinistriesGrid() {
 
   const filtered = activeFilter === "all"
     ? ministries
-    : ministries.filter((m) => m.audience === activeFilter);
+    : ministries.filter((m) => m.audience === activeFilter || m.audience === "all");
 
   return (
     <div>
@@ -19,7 +19,7 @@ export function MinistriesGrid() {
         {filters.map((f) => (
           <button
             key={f}
-            onClick={() => setActiveFilter(f === "all" ? "all" : f)}
+            onClick={() => setActiveFilter(f)}
             className={cn(
               "px-5 py-2.5 rounded-sm text-[10px] font-display tracking-[0.2em] uppercase transition-all duration-300",
               activeFilter === f

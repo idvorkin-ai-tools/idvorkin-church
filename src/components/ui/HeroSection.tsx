@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import { cn } from "../../utils/cn";
 
 interface HeroSectionProps {
   backgroundImage?: string;
   title: string;
   subtitle?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
   overlay?: boolean;
 }
@@ -31,7 +32,7 @@ export function HeroSection({ backgroundImage, title, subtitle, children, classN
           {title}
         </h1>
         {subtitle && (
-          <p className="text-base md:text-lg text-parchment-300 mb-10 font-heading italic text-xl md:text-2xl">
+          <p className="text-xl md:text-2xl text-parchment-300 mb-10 font-heading italic">
             {subtitle}
           </p>
         )}

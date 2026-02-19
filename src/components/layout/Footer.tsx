@@ -23,7 +23,7 @@ export function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-sm leading-relaxed font-heading text-lg italic text-parchment-300">
+            <p className="leading-relaxed font-heading text-lg italic text-parchment-300">
               &ldquo;{church.mission}&rdquo;
             </p>
           </div>

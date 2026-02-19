@@ -1,9 +1,12 @@
-import * as Icons from "lucide-react";
+import { Droplets, Flame, Wine, Heart, Crown, Hand, BookOpen, CircleDot, type LucideIcon } from "lucide-react";
 import type { Sacrament } from "../../types";
 
+const ICON_MAP: Record<string, LucideIcon> = {
+  Droplets, Flame, Wine, Heart, Crown, Hand, BookOpen,
+};
+
 export function SacramentCard({ name, description, icon }: Sacrament) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const IconComponent = (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[icon] || Icons.CircleDot;
+  const IconComponent = ICON_MAP[icon] ?? CircleDot;
 
   return (
     <div className="warm-card rounded-sm p-6 text-center group">

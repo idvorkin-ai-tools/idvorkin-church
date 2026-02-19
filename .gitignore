@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Beads issue tracker (local state)
+.beads/
+
+# AI generation manifests (contain local paths)
+public/images/batch-*.json
+
+# Test results
+test-results/
