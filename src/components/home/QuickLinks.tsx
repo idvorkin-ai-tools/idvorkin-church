@@ -10,16 +10,18 @@ const links = [
 
 export function QuickLinks() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 reveal-stagger">
       {links.map((item) => (
         <Link
           key={item.path}
           to={item.path}
-          className="flex flex-col items-center p-6 bg-white rounded-xl border border-navy-100 hover:shadow-md hover:border-gold-200 transition-all text-center group"
+          className="reveal visible flex flex-col items-center p-7 warm-card rounded-sm text-center group"
         >
-          <item.icon className="w-8 h-8 text-navy-400 group-hover:text-gold-500 transition-colors mb-3" />
-          <span className="font-semibold text-navy-900 text-sm">{item.label}</span>
-          <span className="text-xs text-navy-500 mt-1">{item.description}</span>
+          <div className="w-14 h-14 rounded-full bg-midnight-900 flex items-center justify-center mb-4 group-hover:bg-midnight-800 transition-colors duration-300 group-hover:shadow-lg group-hover:shadow-gold-500/10">
+            <item.icon className="w-6 h-6 text-gold-500 group-hover:text-gold-400 transition-colors duration-300" />
+          </div>
+          <span className="font-display text-xs tracking-wider uppercase text-midnight-900">{item.label}</span>
+          <span className="text-xs text-midnight-400 mt-1.5 font-heading italic">{item.description}</span>
         </Link>
       ))}
     </div>

@@ -4,7 +4,7 @@ import type { ClergyMember } from "../../types";
 
 export function ClergyGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
       {(clergy as ClergyMember[]).map((member) => (
         <ClergyCard key={member.id} {...member} />
       ))}

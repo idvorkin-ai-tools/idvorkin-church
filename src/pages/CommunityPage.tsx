@@ -1,4 +1,5 @@
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import { useReveal } from "../hooks/useReveal";
 import { HeroSection } from "../components/ui/HeroSection";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { FestivalSection } from "../components/community/FestivalSection";
@@ -8,42 +9,50 @@ const cultureItems = [
   {
     title: "Greek Dance",
     description: "Learn traditional Greek dances and perform at community events and the annual Greek Festival.",
-    image: "https://placehold.co/600x400/243b53/f0b429?text=Greek+Dance",
+    image: "/images/raccoon-greek-dance.webp",
   },
   {
     title: "Greek Language",
     description: "Classes for children and adults to learn and preserve the Greek language and heritage.",
-    image: "https://placehold.co/600x400/243b53/f0b429?text=Greek+Language",
+    image: "/images/raccoon-greek-language.webp",
   },
   {
     title: "Fellowship Events",
     description: "Regular social gatherings, dinners, and celebrations that bring our community together.",
-    image: "https://placehold.co/600x400/243b53/f0b429?text=Fellowship",
+    image: "/images/raccoon-fellowship.webp",
   },
 ];
 
 export function CommunityPage() {
   useDocumentTitle("Community");
+  const revealRef = useReveal();
+
   return (
-    <>
+    <div ref={revealRef}>
       <HeroSection
         title="Community"
         subtitle="Building bonds of faith, culture, and friendship"
-        backgroundImage="https://placehold.co/1920x600/102a43/f0b429?text=Community"
+        backgroundImage="/images/raccoon-hero-community.webp"
       />
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <FestivalSection />
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="reveal">
+          <FestivalSection />
+        </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <SectionHeading title="Culture & Heritage" subtitle="Celebrating our Greek Orthodox traditions" />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="reveal">
+          <SectionHeading title="Culture & Heritage" subtitle="Celebrating our Greek Orthodox traditions" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
           {cultureItems.map((item) => (
-            <CultureCard key={item.title} {...item} />
+            <div key={item.title} className="reveal">
+              <CultureCard {...item} />
+            </div>
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

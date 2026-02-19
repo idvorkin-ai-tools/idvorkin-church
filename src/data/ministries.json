@@ -4,62 +4,62 @@
     "name": "GOYA",
     "description": "Greek Orthodox Youth of America — fellowship, faith formation, and community service for teens.",
     "audience": "youth",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=GOYA"
+    "image": "/images/raccoon-ministry-youth.webp"
   },
   {
     "id": "sunday-school",
     "name": "Sunday School",
     "description": "Faith education for children and youth, learning about Orthodox Christian traditions, scripture, and values.",
     "audience": "youth",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=Sunday+School"
+    "image": "/images/raccoon-sunday-school.webp"
   },
   {
     "id": "philoptochos",
     "name": "Philoptochos",
     "description": "The philanthropic ministry of the Greek Orthodox Archdiocese, dedicated to serving those in need through charitable works.",
     "audience": "adults",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=Philoptochos"
+    "image": "/images/raccoon-giving.webp"
   },
   {
     "id": "hope-joy",
     "name": "HOPE & JOY",
     "description": "Programs for younger children focusing on faith, fellowship, and fun activities that build a foundation in Orthodoxy.",
     "audience": "families",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=HOPE+%26+JOY"
+    "image": "/images/raccoon-sunday-school.webp"
   },
   {
     "id": "yal",
     "name": "Young Adult League (YAL)",
     "description": "Fellowship and faith enrichment for young adults, building community through social events, service projects, and Bible studies.",
     "audience": "adults",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=YAL"
+    "image": "/images/raccoon-fellowship.webp"
   },
   {
     "id": "bookstore",
     "name": "Bookstore",
     "description": "Parish bookstore offering Orthodox Christian books, icons, prayer items, and educational resources.",
     "audience": "all",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=Bookstore"
+    "image": "/images/raccoon-greek-language.webp"
   },
   {
     "id": "ocmc",
     "name": "OCMC",
     "description": "Orthodox Christian Mission Center — supporting global mission work and outreach to communities around the world.",
     "audience": "all",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=OCMC"
+    "image": "/images/raccoon-hero-welcome.webp"
   },
   {
     "id": "philoxenia-house",
     "name": "Philoxenia House",
     "description": "Hospitality ministry providing support and resources to those in need, embodying the Orthodox tradition of welcoming the stranger.",
     "audience": "all",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=Philoxenia+House"
+    "image": "/images/raccoon-fellowship.webp"
   },
   {
     "id": "yiayia-friends",
     "name": "Yiayia & Friends",
     "description": "Intergenerational ministry connecting seniors with younger members of the parish through shared activities and fellowship.",
     "audience": "families",
-    "image": "https://placehold.co/600x400/243b53/f0b429?text=Yiayia+%26+Friends"
+    "image": "/images/raccoon-greek-dance.webp"
   }
 ]

@@ -8,14 +8,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-navy-800 text-white hover:bg-navy-900",
-  secondary: "bg-white text-navy-800 border border-navy-200 hover:bg-navy-50",
-  accent: "bg-gold-500 text-navy-900 hover:bg-gold-600 font-semibold",
+  primary: "bg-midnight-900 text-parchment-100 hover:bg-midnight-800 border border-midnight-700",
+  secondary: "bg-parchment-50/20 text-parchment-100 border border-parchment-300/30 hover:bg-parchment-50/30 backdrop-blur-sm",
+  accent: "bg-gradient-to-r from-gold-600 to-gold-500 text-midnight-950 hover:from-gold-500 hover:to-gold-400 font-semibold shadow-lg shadow-gold-500/20",
 };
 
 export function Button({ variant = "primary", href, className, children, ...props }: ButtonProps) {
   const styles = cn(
-    "inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2",
+    "inline-flex items-center justify-center px-7 py-3 rounded-sm text-xs font-display tracking-[0.15em] uppercase transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-400/50 focus:ring-offset-2 focus:ring-offset-midnight-900",
     variantStyles[variant],
     className
   );

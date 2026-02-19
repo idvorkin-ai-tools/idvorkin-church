@@ -23,15 +23,15 @@ const options = [
 
 export function GivingOptions() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
       {options.map((opt) => (
-        <div key={opt.title} className="bg-white rounded-xl shadow-sm border border-navy-100 p-6 text-center hover:shadow-md transition-shadow">
-          <div className="w-14 h-14 bg-gold-50 rounded-full flex items-center justify-center mx-auto mb-4">
-            <opt.icon className="w-7 h-7 text-gold-600" />
+        <div key={opt.title} className="warm-card rounded-sm p-7 text-center group">
+          <div className="w-16 h-16 bg-midnight-900 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:shadow-lg group-hover:shadow-gold-500/15 transition-shadow duration-300">
+            <opt.icon className="w-7 h-7 text-gold-500" />
           </div>
-          <h3 className="text-lg font-semibold text-navy-900 mb-2">{opt.title}</h3>
-          <p className="text-sm text-navy-600 mb-4">{opt.description}</p>
-          <button className="px-5 py-2 bg-navy-800 text-white rounded-lg text-sm font-medium hover:bg-navy-900 transition-colors">
+          <h3 className="font-display text-xs tracking-[0.15em] uppercase text-midnight-900 mb-2">{opt.title}</h3>
+          <p className="text-sm text-midnight-500 mb-5 leading-relaxed">{opt.description}</p>
+          <button className="px-6 py-2.5 bg-midnight-900 text-parchment-100 rounded-sm text-[10px] font-display tracking-[0.2em] uppercase hover:bg-midnight-800 transition-colors duration-300">
             {opt.action}
           </button>
         </div>

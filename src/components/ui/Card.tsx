@@ -10,17 +10,17 @@ interface CardProps {
 
 export function Card({ image, title, description, link, className }: CardProps) {
   return (
-    <div className={cn("bg-white rounded-xl shadow-sm border border-navy-100 overflow-hidden hover:shadow-md transition-shadow", className)}>
+    <div className={cn("warm-card rounded-sm overflow-hidden", className)}>
       {image && (
         <img src={image} alt={title} className="w-full h-48 object-cover" />
       )}
       <div className="p-6">
-        <h3 className="text-lg font-semibold text-navy-900 mb-2">{title}</h3>
-        <p className="text-navy-600 text-sm leading-relaxed">{description}</p>
+        <h3 className="font-heading text-xl font-semibold text-midnight-900 mb-2">{title}</h3>
+        <p className="text-midnight-500 text-sm leading-relaxed">{description}</p>
         {link && (
           <a
             href={link.href}
-            className="inline-block mt-4 text-sm font-medium text-gold-600 hover:text-gold-700 transition-colors"
+            className="inline-block mt-4 text-xs font-display tracking-wider uppercase text-gold-700 hover:text-gold-600 transition-colors duration-300"
           >
             {link.label} &rarr;
           </a>

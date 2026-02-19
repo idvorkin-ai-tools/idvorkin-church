@@ -7,23 +7,23 @@ export function NotFoundPage() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="text-center">
-        <h1 className="text-8xl font-bold text-navy-200 mb-4">404</h1>
-        <h2 className="text-2xl font-semibold text-navy-900 mb-2">Page Not Found</h2>
-        <p className="text-navy-600 mb-8 max-w-md mx-auto">
-          Sorry, we couldn't find the page you're looking for.
+        <h1 className="font-display text-8xl tracking-wider text-parchment-300 mb-4">404</h1>
+        <h2 className="font-heading text-2xl italic text-midnight-900 mb-3">Page Not Found</h2>
+        <p className="text-midnight-500 mb-8 max-w-md mx-auto leading-relaxed">
+          Sorry, we couldn&rsquo;t find the page you&rsquo;re looking for.
           It may have been moved or no longer exists.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-navy-800 text-white rounded-lg text-sm font-medium hover:bg-navy-900 transition-colors"
+            className="inline-flex items-center gap-2 px-7 py-3 bg-midnight-900 text-parchment-100 rounded-sm text-xs font-display tracking-[0.15em] uppercase hover:bg-midnight-800 transition-colors duration-300"
           >
             <Home className="w-4 h-4" />
             Go Home
           </Link>
           <button
             onClick={() => window.history.back()}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-navy-800 border border-navy-200 rounded-lg text-sm font-medium hover:bg-navy-50 transition-colors"
+            className="inline-flex items-center gap-2 px-7 py-3 bg-parchment-50 text-midnight-700 border border-parchment-300 rounded-sm text-xs font-display tracking-[0.15em] uppercase hover:bg-parchment-200/60 transition-colors duration-300"
           >
             <ArrowLeft className="w-4 h-4" />
             Go Back

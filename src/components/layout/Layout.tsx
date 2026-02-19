@@ -7,7 +7,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 export function Layout() {
   useScrollToTop();
   return (
-    <div className="min-h-screen flex flex-col bg-navy-50">
+    <div className="min-h-screen flex flex-col bg-parchment-100">
       <InfoBanner />
       <Header />
       <main className="flex-1">

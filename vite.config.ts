@@ -7,4 +7,17 @@ export default defineConfig({
   server: {
     allowedHosts: true,
   },
+  build: {
+    // Single chunk for gisthost: one JS, one CSS
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        entryFileNames: 'app.js',
+        assetFileNames: (info) => {
+          if (info.name?.endsWith('.css')) return 'style.css'
+          return '[name].[ext]'
+        },
+      },
+    },
+  },
 })
