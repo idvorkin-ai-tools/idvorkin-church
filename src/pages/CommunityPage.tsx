@@ -32,7 +32,6 @@ export function CommunityPage() {
       <HeroSection
         title="Community"
         subtitle="Building bonds of faith, culture, and friendship"
-        backgroundImage="/images/raccoon-hero-community.webp"
       />
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -41,16 +40,18 @@ export function CommunityPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="reveal">
-          <SectionHeading title="Culture & Heritage" subtitle="Celebrating our Greek Orthodox traditions" />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
-          {cultureItems.map((item) => (
-            <div key={item.title} className="reveal">
-              <CultureCard {...item} />
-            </div>
-          ))}
+      <section className="bg-cloud-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="reveal">
+            <SectionHeading title="Culture & Heritage" subtitle="Celebrating our Greek Orthodox traditions" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
+            {cultureItems.map((item) => (
+              <div key={item.title} className="reveal">
+                <CultureCard {...item} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

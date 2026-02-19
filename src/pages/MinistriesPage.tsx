@@ -13,7 +13,6 @@ export function MinistriesPage() {
       <HeroSection
         title="Ministries"
         subtitle="Serve, grow, and connect through our parish ministries"
-        backgroundImage="/images/raccoon-ministry-youth.webp"
       />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

@@ -21,10 +21,10 @@ export function MinistriesGrid() {
             key={f}
             onClick={() => setActiveFilter(f)}
             className={cn(
-              "px-5 py-2.5 rounded-sm text-[10px] font-display tracking-[0.2em] uppercase transition-all duration-300",
+              "px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 capitalize",
               activeFilter === f
-                ? "bg-midnight-900 text-parchment-100 shadow-lg shadow-midnight-900/20"
-                : "bg-parchment-50 text-midnight-500 border border-parchment-300 hover:bg-parchment-200/60 hover:text-midnight-700"
+                ? "bg-iris-500 text-white shadow-sm"
+                : "bg-white text-ink-500 border border-cloud-300 hover:bg-cloud-50 hover:text-ink-700"
             )}
           >
             {f === "all" ? "All Ministries" : f}

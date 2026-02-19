@@ -14,7 +14,6 @@ export function AboutPage() {
       <HeroSection
         title="About Our Parish"
         subtitle="A vibrant community of faith in the heart of Seattle since 1916"
-        backgroundImage="/images/raccoon-hero-welcome.webp"
       />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -23,20 +22,22 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="reveal">
-          <SectionHeading title="Our Clergy" subtitle="Dedicated servants guiding our community in faith" />
-        </div>
-        <div className="reveal">
-          <ClergyGrid />
+      <section className="bg-cloud-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="reveal">
+            <SectionHeading title="Our Clergy" subtitle="Dedicated servants guiding our community in faith" />
+          </div>
+          <div className="reveal">
+            <ClergyGrid />
+          </div>
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="reveal">
           <SectionHeading title="Our History" subtitle="Over a century of faith in the Pacific Northwest" />
         </div>
-        <div className="reveal warm-card rounded-sm p-8 md:p-10 text-midnight-600 leading-relaxed space-y-5">
+        <div className="reveal modern-card p-8 md:p-10 text-ink-600 leading-relaxed space-y-5">
           <p className="font-heading text-lg">
             Saint Demetrios Greek Orthodox Church has been a cornerstone of the Seattle Greek community
             since 1916. For over a century, our parish has served as a spiritual home, cultural center,

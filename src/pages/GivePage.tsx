@@ -14,7 +14,6 @@ export function GivePage() {
       <HeroSection
         title="Give"
         subtitle="Your generosity sustains and strengthens our parish"
-        backgroundImage="/images/raccoon-giving.webp"
       />
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -23,12 +22,14 @@ export function GivePage() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="reveal">
-          <SectionHeading title="Ways to Give" subtitle="Choose the method that works best for you" />
-        </div>
-        <div className="reveal">
-          <GivingOptions />
+      <section className="bg-cloud-50 py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="reveal">
+            <SectionHeading title="Ways to Give" subtitle="Choose the method that works best for you" />
+          </div>
+          <div className="reveal">
+            <GivingOptions />
+          </div>
         </div>
       </section>
     </div>
