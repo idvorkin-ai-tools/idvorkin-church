@@ -1,0 +1,26 @@
+[
+  {
+    "id": "fr-photios",
+    "name": "Fr. Photios Dumont",
+    "title": "Proistamenos",
+    "role": "Lead Pastor",
+    "image": "https://placehold.co/400x500/243b53/f0b429?text=Fr.+Photios",
+    "bio": "Fr. Photios Dumont serves as the Proistamenos (Lead Pastor) of Saint Demetrios Greek Orthodox Church, guiding the community in faith, worship, and service."
+  },
+  {
+    "id": "fr-spyridon",
+    "name": "Fr. Spyridon Rice",
+    "title": "Presbyter",
+    "role": "Associate Pastor",
+    "image": "https://placehold.co/400x500/243b53/f0b429?text=Fr.+Spyridon",
+    "bio": "Fr. Spyridon Rice serves as an Associate Pastor, supporting the liturgical life and pastoral care of the parish community."
+  },
+  {
+    "id": "dn-perry",
+    "name": "Dn. Perry Angelos",
+    "title": "Deacon",
+    "role": "Deacon",
+    "image": "https://placehold.co/400x500/243b53/f0b429?text=Dn.+Perry",
+    "bio": "Deacon Perry Angelos assists in the liturgical services and supports the parish ministries and outreach programs."
+  }
+]

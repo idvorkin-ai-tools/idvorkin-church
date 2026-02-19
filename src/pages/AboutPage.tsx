@@ -1,0 +1,46 @@
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import { HeroSection } from "../components/ui/HeroSection";
+import { SectionHeading } from "../components/ui/SectionHeading";
+import { ClergyGrid } from "../components/about/ClergyGrid";
+import { MissionSection } from "../components/about/MissionSection";
+
+export function AboutPage() {
+  useDocumentTitle("About");
+  return (
+    <>
+      <HeroSection
+        title="About Our Parish"
+        subtitle="A vibrant community of faith in the heart of Seattle since 1916"
+        backgroundImage="https://placehold.co/1920x600/102a43/f0b429?text=About+Us"
+      />
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <MissionSection />
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <SectionHeading title="Our Clergy" subtitle="Dedicated servants guiding our community in faith" />
+        <ClergyGrid />
+      </section>
+
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <SectionHeading title="Our History" subtitle="Over a century of faith in the Pacific Northwest" />
+        <div className="bg-white rounded-xl shadow-sm border border-navy-100 p-8 text-navy-700 leading-relaxed space-y-4">
+          <p>
+            Saint Demetrios Greek Orthodox Church has been a cornerstone of the Seattle Greek community
+            since 1916. For over a century, our parish has served as a spiritual home, cultural center,
+            and gathering place for Orthodox Christians in the Pacific Northwest.
+          </p>
+          <p>
+            Our beautiful church building on Boyer Avenue East stands as a testament to the faith and
+            dedication of generations of parishioners who have built and sustained this community.
+          </p>
+          <p>
+            Today, Saint Demetrios continues to grow and thrive, welcoming newcomers and lifelong members
+            alike in the timeless traditions of Orthodox Christianity.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}

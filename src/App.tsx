@@ -1,12 +1,29 @@
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout } from "./components/layout/Layout";
+import { HomePage } from "./pages/HomePage";
+import { AboutPage } from "./pages/AboutPage";
+import { WorshipPage } from "./pages/WorshipPage";
+import { MinistriesPage } from "./pages/MinistriesPage";
+import { CommunityPage } from "./pages/CommunityPage";
+import { GivePage } from "./pages/GivePage";
+import { ContactPage } from "./pages/ContactPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <h1>idvorkin-church</h1>
-      <p>Coming soon.</p>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/worship" element={<WorshipPage />} />
+          <Route path="/ministries" element={<MinistriesPage />} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="/give" element={<GivePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sunday-liturgy",
+    "title": "Sunday Divine Liturgy",
+    "date": "Every Sunday",
+    "time": "9:30 AM",
+    "description": "Join us for the celebration of the Divine Liturgy, followed by fellowship and coffee hour.",
+    "location": "Main Sanctuary"
+  },
+  {
+    "id": "bible-study",
+    "title": "Weekly Bible Study",
+    "date": "Every Wednesday",
+    "time": "7:00 PM",
+    "description": "Explore scripture together in a welcoming small group setting. All are welcome.",
+    "location": "Parish Hall"
+  },
+  {
+    "id": "greek-festival",
+    "title": "Seattle Greek Festival",
+    "date": "Fall 2026",
+    "time": "All Day",
+    "description": "Our annual celebration of Greek culture featuring authentic food, music, dancing, and tours of our beautiful church.",
+    "location": "Church Grounds"
+  },
+  {
+    "id": "philoptochos-luncheon",
+    "title": "Philoptochos Spring Luncheon",
+    "date": "Spring 2026",
+    "time": "12:00 PM",
+    "description": "Annual fundraising luncheon supporting local charities and community outreach programs.",
+    "location": "Parish Hall"
+  }
+]

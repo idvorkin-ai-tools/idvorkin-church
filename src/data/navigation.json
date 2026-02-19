@@ -1,0 +1,9 @@
+[
+  { "label": "Home", "path": "/" },
+  { "label": "About", "path": "/about" },
+  { "label": "Worship", "path": "/worship" },
+  { "label": "Ministries", "path": "/ministries" },
+  { "label": "Community", "path": "/community" },
+  { "label": "Give", "path": "/give" },
+  { "label": "Contact", "path": "/contact" }
+]
